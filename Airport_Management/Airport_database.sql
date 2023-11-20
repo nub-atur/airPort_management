@@ -127,14 +127,14 @@ CREATE TABLE arrival_log(
 );
 
 CREATE TABLE departure_log(
-			    id INT PRIMARY KEY,
-		            airline_id INT NOT NULL,
-			    flight_number VARCHAR(20) NOT NULL UNIQUE,
-			    departure_airport_id VARCHAR(20) NOT NULL,
-			    departure_time DATETIME NOT NULL,
-			    FOREIGN KEY (flight_number) REFERENCES flights(flight_number),
-			    FOREIGN KEY (airline_id) REFERENCES flights(airline_id),
-			    FOREIGN KEY (departure_airport_id) REFERENCES flights(departure_airport_id)
+    id INT PRIMARY KEY,
+    airline_id INT NOT NULL,
+    flight_number VARCHAR(20) NOT NULL UNIQUE,
+    departure_airport_id VARCHAR(20) NOT NULL,
+    departure_time DATETIME NOT NULL,
+    FOREIGN KEY (flight_number) REFERENCES flights(flight_number),
+    FOREIGN KEY (airline_id) REFERENCES flights(airline_id),
+    FOREIGN KEY (departure_airport_id) REFERENCES flights(departure_airport_id)
 );
 
 CREATE TABLE myAirport(
